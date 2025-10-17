@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #e6f3ff;
+  --primary: #55a9f7;
+  --shadow-light: #ffffff;
+  --shadow-dark: #c2dbf2;
+  --text: #333;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= NAVBAR ================= */
+header {
+  background: var(--bg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-circle {
+  background: var(--bg);
+  box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+  color: var(--primary);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+
+/* hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero h1 span {
+  color: var(--primary);
+}
+
+.hero p {
+  margin-top: 1rem;
+  color: #555;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero img {
+  max-width: 300px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%; 
+  box-shadow: 0 10px 25px rgba(85, 169, 247, 0.25);
+  transition: 0.3s ease;
+  border: 4px solid white;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 1.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4aa5ff;
+  transform: translateY(-2px);
+}
+
+/* ================= SECTION ================= */
+section {
+  padding: 4rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+/* ================= DATA DIRI ================= */
+.card-biodata {
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-biodata p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+/* ================= LIST ================= */
+ul li {
+  list-style: none;
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= PROFIL ================= */
+.profil-section h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 1.5rem 0 1rem;
+  text-align: center;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.skill-item {
+  background: rgba(85, 169, 247, 0.1);
+  color: #1e3a8a;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid rgba(85, 169, 247, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  transition: 0.3s;
+}
+
+.skill-item:hover {
+  background: #a0d1fe;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.skill-level {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.skill-item:hover .skill-level {
+  color: white;
+}
+
+/* ================= KONTAK ================= */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+#contact i {
+  color: var(--primary);
+  margin-right: 8px;
+}
+
+#contact a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+#contact .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 1.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(85, 169, 247, 0.3);
+  transition: 0.3s ease;
+}
+
+#contact .btn:hover {
+  background: #2d8be6;
+  transform: translateY(-3px);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--bg);
+  box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+  margin-top: 2rem;
+  border-radius: 20px 20px 0 0;
+  color: #555;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--bg);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: right;
+  }
+
+  .menu a {
+    padding: 10px 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hero img {
+    max-width: 250px;
+  }
+}

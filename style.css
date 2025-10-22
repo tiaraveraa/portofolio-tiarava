@@ -153,12 +153,20 @@ header {
 }
 
 /* ================= SERTIFIKAT STYLE ================= */
+.sertifikat-card {
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 6px 6px 15px var(--shadow-dark), -6px -6px 15px var(--shadow-light);
+  background: var(--bg);
+  text-align: center;
+}
+
 .sertifikat-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .sertifikat-btn {
@@ -166,7 +174,7 @@ header {
   align-items: center;
   gap: 8px;
   font-size: 0.95rem;
-  padding: 10px 22px;
+  padding: 10px 24px;
   border-radius: 30px;
   background: var(--primary);
   color: #fff;
@@ -176,16 +184,20 @@ header {
   transition: all 0.3s ease;
 }
 
-.sertifikat-btn i {
-  font-size: 16px;
-}
-
 .sertifikat-btn:hover {
   background: #3c91e6;
   transform: translateY(-3px);
 }
 
-/* Responsive biar tetap rapi di HP */
+.sertifikat-btn i {
+  font-size: 16px;
+}
+
+#sertifikat {
+  margin-top: 40px;
+}
+
+/* Responsif */
 @media (max-width: 600px) {
   .sertifikat-list {
     flex-direction: column;
@@ -197,7 +209,6 @@ header {
     text-align: center;
   }
 }
-
 
 .btn:hover {
   background: #3c92e6;
@@ -326,3 +337,4 @@ footer {
     padding: 0 15px;
   }
 }
+
